@@ -3,6 +3,7 @@
 import { FaReact } from 'react-icons/fa6';
 import IntoMe from '../../constants/intoMe';
 import { HiArrowNarrowRight } from 'react-icons/hi';
+import ReactLottie from '../react-lottie/ReactLottie';
 
 function SubCoop(props: any) {
   const setModalOpen = () => {
@@ -12,12 +13,17 @@ function SubCoop(props: any) {
     <div>
       <h1>สหกิจศึกษา</h1>
       <p>บริษัท: {IntoMe.titleTimeOneComp}</p>
-      <p className="text-slate-950">
-        ตำแหน่ง: <b> {IntoMe.titleTimeOneRank}</b>
-        <span>
-          <FaReact size={20} color={'#3498DB '} />
-        </span>
-      </p>
+      <div className="flex items-center">
+        <div>
+          <p className="text-slate-950">
+            ตำแหน่ง: <b> {IntoMe.titleTimeOneRank}</b>
+          </p>
+        </div>
+        <div>
+          <ReactLottie w={40} h={40} />
+        </div>
+      </div>
+
       <p className="indent-5">- {IntoMe.delTimeTreeComp}</p>
       <p className="indent-5">
         - เข้าร่วมการประกวดโครงงานสหกิจศึกษา ประจำภาคการศึกษา 2/2565 <b>(ด้านวิทยาศาสตร์และเทคโนโลยี)</b>

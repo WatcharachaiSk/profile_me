@@ -11,7 +11,7 @@ function RoutesPath() {
     <>
       <Routes>
         <Route path={PathRoutesPage.home} element={<HomePage />} />
-        <Route path={'/'} element={<TextPDF />} />
+        {/* <Route path={'/'} element={<TextPDF />} /> */}
       </Routes>
     </>
   );

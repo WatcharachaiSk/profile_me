@@ -7,6 +7,8 @@ import CarouselImg from '../../components/card/CarouselImg';
 import SubCoop from '../../components/text/SubCoop';
 import PdfViewer from '../../components/preview/PdfViewer';
 import { PDF } from '../../configs/pdf-index';
+import HorizontalParallax from '../../components/react-spring/HorizontalParallax';
+import RightDoubleTapLottie from '../../components/react-lottie/RightDoubleTapLottie';
 
 // import React from "react";
 
@@ -74,15 +76,13 @@ function HomePage() {
           style={{ overflow: 'auto', border: '1px solid black' }}
         >
           {/* เนื้อหาที่ต้องการให้แสดงอนิเมชัน */}
-          <animated.div
-            className="flex flex-1 xl:flex-row md:flex-col flex-col  w-full h-full p-2"
-            style={propsSpring}
-          >
+          <animated.div className="flex flex-1 xl:flex-row md:flex-col flex-col  w-full h-full p-2" style={propsSpring}>
             <div className="flex xl:basis-1/2 md:basis-2/2 sm:flex-1 flex-1 h-full w-full p-5 items-center justify-center">
               <SubCoop setOpenModalPdfCoop={setOpenModalPdfCoop} />
             </div>
-            <div className="flex xl:basis-1/2 md:basis-2/2 sm:flex-1 flex-1 h-full w-full">
-              <CarouselImg />
+            <div className="flex xl:basis-1/2 md:basis-2/2 sm:flex-1 flex-1 h-full w-full ">
+              <HorizontalParallax />
+              {/* <CarouselImg /> */}
             </div>
           </animated.div>
         </div>

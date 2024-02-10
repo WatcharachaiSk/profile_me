@@ -5,7 +5,7 @@ const IntoMe = {
   lName: 'สำคัญ',
   nName: 'เอิร์ธ',
   birthday: 'เกิดวันที่ 17 กรกฎาคม 2543',
-  interested: 'Full-Stack Developer และ Mobile Developer ตามลําดับสามารถใช้งานภาษา JavaScript, TypeScript และกําลังศึกษาเพิ่มเติมอย่างต่อเนื่อง',
+  interested: 'Full-Stack Developer และ Back End หรือ Front End ตามลําดับสามารถใช้งานภาษา JavaScript, TypeScript และกําลังศึกษาเพิ่มเติมอย่างต่อเนื่อง',
   js: 'JavaScript, TypeScript (ระดับดี)',
   basic: 'C, C++, Go, PHP, JAVA, SQL  (พื้นฐาน)',
   feReact: 'React, React Native (redux toolkit)',
@@ -39,7 +39,7 @@ const IntoMe = {
   titleTimeTreeRank: 'Full-Stack (Vue, React, NestJS)',
   titleTimeTreeComp: 'อิเลคทรอนิกส์ เชลล์ จำกัด Eectronic Shell Co.,Ltd.',
   delTimeTreeComp: 'ออกแบบและพัฒนาระบบตรวจสอบครุภัณฑ์โดยมีการใช้กล้องมือถือเพื่อสแกนคิวอาร์โค้ดและเชื่อมต่อกับ API ของบริษัท - พัฒนาด้วย React Native, TypeScript',
-  
+
   titleEducOneTh: 'เทคนิคคอมพิวเตอร์',
   titleEducOneEn: 'ComputerTechnology',
   titleEducOneGPA: '3.29GPA',

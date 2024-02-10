@@ -5,7 +5,7 @@ import { ImgCoppArr } from '../../configs/img-coop';
 import _ from 'lodash';
 import {} from 'react-icons/bs';
 
-ImgCoppArr;
+// ImgCoppArr;
 
 function CarouselImg() {
   return (

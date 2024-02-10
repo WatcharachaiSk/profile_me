@@ -1,5 +1,5 @@
 const  enum PathRoutesPage {
-  home = "/",
+  home = "/home",
 };
 
 export default PathRoutesPage;

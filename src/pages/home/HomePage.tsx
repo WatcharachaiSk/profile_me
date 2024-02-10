@@ -9,11 +9,14 @@ import PdfViewer from '../../components/preview/PdfViewer';
 import { PDF } from '../../configs/pdf-index';
 import HorizontalParallax from '../../components/react-spring/HorizontalParallax';
 import RightDoubleTapLottie from '../../components/react-lottie/RightDoubleTapLottie';
+import VerticalParallax from '../../components/react-spring/VerticalParallax';
+import SubProj from '../../components/text/SubProj';
 
 // import React from "react";
 
 function HomePage() {
   const [openModalPdfCoop, setOpenModalPdfCoop] = useState(false);
+  const [openModalPdfProj, setOpenModalPdfProj] = useState(false);
 
   // สร้าง ref เพื่ออ้างอิงไปยัง element ที่ต้องการ scroll ไป
   const scrollCoopRef = useRef<any>(null);
@@ -68,13 +71,9 @@ function HomePage() {
         <ExperienceComponents handleButtonClick={handleButtonClick} />
       </div>
       {/*  */}
-      <div className="flex mt-10 flex-col  w-full ">
+      <div className="flex mt-10 flex-col w-full">
         {/* ตำแหน่งที่ต้องการ scroll ไป */}
-        <div
-          ref={scrollCoopRef}
-          className="felx h-screen w-full flex-wrap"
-          style={{ overflow: 'auto', border: '1px solid black' }}
-        >
+        <div ref={scrollCoopRef} className="felx h-screen w-full flex-wrap" style={{ overflow: 'auto' }}>
           {/* เนื้อหาที่ต้องการให้แสดงอนิเมชัน */}
           <animated.div className="flex flex-1 xl:flex-row md:flex-col flex-col  w-full h-full p-2" style={propsSpring}>
             <div className="flex xl:basis-1/2 md:basis-2/2 sm:flex-1 flex-1 h-full w-full p-5 items-center justify-center">
@@ -88,8 +87,13 @@ function HomePage() {
         </div>
 
         {/* Element ที่ใช้ ref และต้องการ scroll ไป */}
-        <div ref={scrollProjRef} className="h-screen" style={{ border: '1px solid red', padding: '20px' }}>
-          Content at the scroll position Proj
+        <div ref={scrollProjRef} className="felx h-screen w-full flex-wrap" style={{ overflow: 'auto' }}>
+          <animated.div className="flex flex-1 xl:flex-row md:flex-col flex-col  w-full h-full p-2" style={propsSpring}>
+            <div className="flex xl:basis-1/2 md:basis-2/2 sm:flex-1 flex-1 h-full w-full p-5 items-center justify-center">
+              <SubProj setOpenModalPdfProj={setOpenModalPdfProj} />
+            </div>
+            <div className="flex xl:basis-1/2 md:basis-2/2 sm:flex-1 flex-1 h-full w-full "></div>
+          </animated.div>
         </div>
 
         {/* ตำแหน่งที่ต้องการ scroll ไป */}
@@ -97,6 +101,7 @@ function HomePage() {
           Content after scroll position Work
         </div>
       </div>
+      <VerticalParallax offset={0} />
     </div>
   );
 }

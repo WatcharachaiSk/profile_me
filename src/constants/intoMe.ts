@@ -25,15 +25,18 @@ const IntoMe = {
   email: 'watcharachai.sk@gmail.com',
   tol: '0864552623',
   git: 'https://github.com/WatcharachaiSk',
+
   titleTimeOne: 'มิ.ย. - ต.ค. 2565 (4 เดือน)',
   titleTimeOneTitle: 'สหกิจศึกษา',
   titleTimeOneComp: 'อิเลคทรอนิกส์ เชลล์ จำกัด Eectronic Shell Co.,Ltd.',
   titleTimeOneRank: 'Mobile Developer (React Native, TypeScript)',
   titleTimeOneProj: 'พัฒนาระบบตรวจสอบครุภัณฑ์โดยการใช้กล้องมือถือ',
+
   titleTimeTwo: 'พ.ย. 2565 - ก.พ. 2566 (4 เดือน)',
   titleTimeTwoComp: 'ปริญญานิพนธ์',
-  titleTimeTwoRank: 'Full-Stack (React, NodeJS Express)',
+  titleTimeTwoRank: 'Full-Stack (React, NodeJS Express Sequelize)',
   titleTimeTwoProj: 'การพัฒนาระบบจัดครุภัณฑ์ผ่านเว็บไซต์และระบบปฏิบัติการแอนดรอยด์',
+
   titleTimeTree: 'เม.ย. 2566 - ปัจจุบัน',
   titleTimeTreeTitle: 'Junior Developer',
   titleTimeTreeRank: 'Full-Stack (Vue, React, NestJS)',

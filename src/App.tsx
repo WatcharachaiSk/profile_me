@@ -1,6 +1,7 @@
 // import { useState } from "react";
 import './App.css';
-import RoutesPath from './router/RoutesPath';
+import HomePage from './pages/home/HomePage';
+// import RoutesPath from './router/RoutesPath';
 
 function App() {
   // const [count, setCount] = useState(0);
@@ -8,7 +9,7 @@ function App() {
   return (
     <div className="h-screen w-screen">
       <div className="flex ">
-        <RoutesPath />
+        <HomePage />
       </div>
     </div>
   );

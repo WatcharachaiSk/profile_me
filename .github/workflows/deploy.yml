@@ -19,7 +19,8 @@ jobs:
         with:
           node-version: 16
 
-      # ลบขั้นตอนการติดตั้ง dependencies ดังนี้
+      - name: Install dependencies
+        uses: bahmutov/npm-install@v1
 
       - name: Build project
         run: npm run build

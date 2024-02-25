@@ -38,8 +38,8 @@ const IntoMe = {
   titleTimeTwoProj: 'การพัฒนาระบบจัดครุภัณฑ์ผ่านเว็บไซต์และระบบปฏิบัติการแอนดรอยด์',
 
   titleTimeTree: 'เม.ย. 2566 - ปัจจุบัน',
-  titleTimeTreeTitle: 'Junior Developer',
-  titleTimeTreeRank: 'Full-Stack (Vue, React, NestJS)',
+  titleTimeTreeTitle: 'Developer',
+  titleTimeTreeRank: 'Full-Stack Developer (Vue, React, NestJS)',
   titleTimeTreeComp: 'อิเลคทรอนิกส์ เชลล์ จำกัด Eectronic Shell Co.,Ltd.',
   delTimeTreeComp: 'ออกแบบและพัฒนาระบบตรวจสอบครุภัณฑ์โดยมีการใช้กล้องมือถือเพื่อสแกนคิวอาร์โค้ดและเชื่อมต่อกับ API ของบริษัท - พัฒนาด้วย React Native, TypeScript',
 

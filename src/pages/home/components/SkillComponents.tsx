@@ -10,21 +10,15 @@ function SkillComponents() {
     <div className="flex flex-col bg-gray-600 w-full h-full p-2 overscroll-contain">
       {/* Skill */}
       <div className="flex flex-row justify-center">
-        <img className="object-contain h-40 w-42" src={IMG.me_1} />
+        <img className="object-contain h-40 w-42" src={IMG.photome} />
       </div>
       {/*  */}
       <TitleText title={'ข้อมูลส่วนตัว'} />
 
-      <div className="text-white text-sm">
+      <div className="text-white text-lg text-center">
         <p>
           {IntoMe.titleName} {IntoMe.fName} {IntoMe.lName} ชื่อเล่น {IntoMe.nName} <br /> {IntoMe.birthday}
         </p>
-      </div>
-
-      <TitleText title={'สนใจตำแหน่ง'} />
-
-      <div className="text-white text-sm">
-        <p>{IntoMe.interested}</p>
       </div>
 
       <TitleText title={'ทักษะ และ ความสามารถ'} />

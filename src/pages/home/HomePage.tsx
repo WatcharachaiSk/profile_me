@@ -11,12 +11,15 @@ import HorizontalParallax from '../../components/react-spring/HorizontalParallax
 import RightDoubleTapLottie from '../../components/react-lottie/RightDoubleTapLottie';
 import VerticalParallax from '../../components/react-spring/VerticalParallax';
 import SubProj from '../../components/text/SubProj';
+import ReactPlayer from 'react-player';
+import SubWork from '../../components/text/SubWork';
 
 // import React from "react";
 
 function HomePage() {
   const [openModalPdfCoop, setOpenModalPdfCoop] = useState(false);
   const [openModalPdfProj, setOpenModalPdfProj] = useState(false);
+  const [openModalPdfProjMa, setOpenModalPdfProjMa] = useState(false);
 
   // สร้าง ref เพื่ออ้างอิงไปยัง element ที่ต้องการ scroll ไป
   const scrollCoopRef = useRef<any>(null);
@@ -61,10 +64,12 @@ function HomePage() {
   // ตั้งค่าให้ handleScroll ทำงานเมื่อมี scroll
   window.addEventListener('scroll', handleScrollCoop);
   return (
-    <div className="bg-white flex flex-row w-full h-screen flex-wrap">
+    <div className="bg-white flex flex-row w-full h-fit flex-wrap">
       <PdfViewer pdfUrl={PDF.pdfCoop} openModal={openModalPdfCoop} setOpenModal={setOpenModalPdfCoop} />
+      <PdfViewer pdfUrl={PDF.pdfPrApp} openModal={openModalPdfProj} setOpenModal={setOpenModalPdfProj} />
+      <PdfViewer pdfUrl={PDF.pdfPrMa} openModal={openModalPdfProjMa} setOpenModal={setOpenModalPdfProjMa} />
 
-      <div className="flex xl:basis-1/4 md:basis-2/4 sm-flex-1 h-full overscroll-contain">
+      <div className="flex xl:basis-1/4 md:basis-2/4 sm-flex-1 w-full h-full overscroll-contain">
         <SkillComponents />
       </div>
       <div className="flex xl:basis-3/4 md:basis-2/4 sm-flex-1  w-full h-fit">
@@ -86,22 +91,37 @@ function HomePage() {
           </animated.div>
         </div>
 
-        {/* Element ที่ใช้ ref และต้องการ scroll ไป */}
+        {/* */}
         <div ref={scrollProjRef} className="felx h-screen w-full flex-wrap" style={{ overflow: 'auto' }}>
-          <animated.div className="flex flex-1 xl:flex-row md:flex-col flex-col  w-full h-full p-2" style={propsSpring}>
+          <div className="flex flex-1 xl:flex-row md:flex-col flex-col  w-full h-full p-2">
             <div className="flex xl:basis-1/2 md:basis-2/2 sm:flex-1 flex-1 h-full w-full p-5 items-center justify-center">
-              <SubProj setOpenModalPdfProj={setOpenModalPdfProj} />
+              <SubProj setOpenModalPdfProj={setOpenModalPdfProjMa} />
             </div>
-            <div className="flex xl:basis-1/2 md:basis-2/2 sm:flex-1 flex-1 h-full w-full "></div>
-          </animated.div>
+            <div className="flex xl:basis-1/2 md:basis-2/2 sm:flex-1 flex-1 h-full w-full items-center justify-center">
+              <div className="flex flex-col items-center justify-center">
+                <h3>สาธิตการใช้งาน</h3>
+                <ReactPlayer controls={true} url="https://www.youtube.com/watch?v=cCGkwXezHSg" />
+              </div>
+            </div>
+          </div>
         </div>
 
-        {/* ตำแหน่งที่ต้องการ scroll ไป */}
-        <div ref={scrollWorkRef} className="h-screen" style={{ border: '1px solid black', padding: '20px' }}>
-          Content after scroll position Work
+        {/* */}
+        <div ref={scrollWorkRef} className="felx h-screen w-full flex-wrap" style={{ overflow: 'auto' }}>
+          <div className="flex flex-1 xl:flex-row md:flex-col flex-col  w-full h-full p-2 ">
+            <div className="flex xl:basis-1/2 md:basis-2/2 sm:flex-1 flex-1 h-full w-full p-5 items-center justify-center ">
+              <SubWork />
+            </div>
+            <div className="flex xl:basis-1/2 md:basis-2/2 sm:flex-1 flex-1 h-full w-full items-center justify-center">
+              <div className="flex flex-col items-center justify-center">
+                <h3>Dev</h3>
+                {/* <ReactPlayer controls={true} url="https://www.youtube.com/watch?v=cCGkwXezHSg" /> */}
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <VerticalParallax offset={0} />
+      {/* <VerticalParallax offset={0} /> */}
     </div>
   );
 }

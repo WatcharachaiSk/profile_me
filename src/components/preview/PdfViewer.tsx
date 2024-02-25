@@ -7,7 +7,7 @@ pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/b
 
 const PdfViewer = (props: any) => {
   const [numPages, setNumPages] = useState<any>(null);
-  const [pageNumber, setPageNumber] = useState(20);
+  const [pageNumber, setPageNumber] = useState(1);
 
   const onDocumentLoadSuccess = ({ numPages }: any) => {
     setNumPages(numPages);
@@ -29,6 +29,7 @@ const PdfViewer = (props: any) => {
       size="7xl"
       show={props.openModal}
       onClose={() => {
+        setPageNumber(1)
         props.setOpenModal(false);
       }}
     >

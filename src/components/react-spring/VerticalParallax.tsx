@@ -1,5 +1,11 @@
 import { useRef } from 'react';
 import { Parallax, ParallaxLayer, IParallax } from '@react-spring/parallax';
+import './animation.css';
+import { IMG } from '../../configs/img-index';
+import { GIFs } from '../../configs/img-index copy';
+import DevBluLottie from '../react-lottie/DevBluLottie';
+import ChevLottie from '../react-lottie/ChevLottie';
+import ChevWhiteeJsonLottie from '../react-lottie/ChevWhiteeJsonLottie';
 
 interface PageProps {
   offset: number;
@@ -11,11 +17,10 @@ const url = (name: string, wrap = false) =>
 function VerticalParallax(props: PageProps) {
   const parallax = useRef<IParallax>(null!);
   return (
-    <div style={{ width: '100%', height: '100%', background: '#0c0b0b' }}>
-      <Parallax ref={parallax} pages={3}>
-        <ParallaxLayer offset={1} speed={1} style={{ backgroundColor: '#805E73' }} />
+    <div className="w-full h-screen" style={{ top: 0, left: 0, width: '100%', height: '100%', background: '#253237' }}>
+      <Parallax ref={parallax} pages={4}>
+        <ParallaxLayer offset={1} speed={1} style={{ backgroundColor: '#000000' }} />
         <ParallaxLayer offset={2} speed={1} style={{ backgroundColor: '#87BCDE' }} />
-
         <ParallaxLayer
           offset={0}
           speed={0}
@@ -26,88 +31,60 @@ function VerticalParallax(props: PageProps) {
           }}
         />
 
-        <ParallaxLayer offset={1.3} speed={-0.3} style={{ pointerEvents: 'none' }}>
-          <img src={url('satellite4')} style={{ width: '15%', marginLeft: '70%' }} />
-        </ParallaxLayer>
-
-        <ParallaxLayer offset={1} speed={0.8} style={{ opacity: 0.1 }}>
-          <img src={url('cloud')} style={{ display: 'block', width: '20%', marginLeft: '55%' }} />
-          <img src={url('cloud')} style={{ display: 'block', width: '10%', marginLeft: '15%' }} />
-        </ParallaxLayer>
-
-        <ParallaxLayer offset={1.75} speed={0.5} style={{ opacity: 0.1 }}>
-          <img src={url('cloud')} style={{ display: 'block', width: '20%', marginLeft: '70%' }} />
-          <img src={url('cloud')} style={{ display: 'block', width: '20%', marginLeft: '40%' }} />
-        </ParallaxLayer>
-
-        <ParallaxLayer offset={1} speed={0.2} style={{ opacity: 0.2 }}>
-          <img src={url('cloud')} style={{ display: 'block', width: '10%', marginLeft: '10%' }} />
-          <img src={url('cloud')} style={{ display: 'block', width: '20%', marginLeft: '75%' }} />
-        </ParallaxLayer>
-
-        <ParallaxLayer offset={1.6} speed={-0.1} style={{ opacity: 0.4 }}>
-          <img src={url('cloud')} style={{ display: 'block', width: '20%', marginLeft: '60%' }} />
-          <img src={url('cloud')} style={{ display: 'block', width: '25%', marginLeft: '30%' }} />
-          <img src={url('cloud')} style={{ display: 'block', width: '10%', marginLeft: '80%' }} />
-        </ParallaxLayer>
-
-        <ParallaxLayer offset={2.6} speed={0.4} style={{ opacity: 0.6 }}>
-          <img src={url('cloud')} style={{ display: 'block', width: '20%', marginLeft: '5%' }} />
-          <img src={url('cloud')} style={{ display: 'block', width: '15%', marginLeft: '75%' }} />
-        </ParallaxLayer>
+        {/* 1 */}
 
         <ParallaxLayer
-          offset={2.5}
-          speed={-0.4}
+          offset={1.1}
+          speed={0.9}
           style={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
             pointerEvents: 'none',
           }}
         >
-          <img src={url('earth')} style={{ width: '60%' }} />
+          <img src={IMG.typeOrm} style={{ width: '13%', marginLeft: '71%' }} />
         </ParallaxLayer>
-
         <ParallaxLayer
-          offset={2}
-          speed={-0.3}
+          offset={1.3}
+          speed={0.7}
           style={{
-            backgroundSize: '80%',
-            backgroundPosition: 'center',
-            backgroundImage: url('clients', true),
-          }}
-        />
-
-        <ParallaxLayer
-          offset={0}
-          speed={0.1}
-          onClick={() => parallax.current.scrollTo(1)}
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
+            pointerEvents: 'none',
           }}
         >
-          <img src={url('server')} style={{ width: '20%' }} />
+          <img src={IMG.jwt} style={{ width: '15%', marginLeft: '70%' }} />
         </ParallaxLayer>
-
         <ParallaxLayer
-          offset={1}
-          speed={0.1}
+          offset={1.5}
+          speed={0.6}
+          style={{
+            pointerEvents: 'none',
+          }}
+        >
+          <img src={IMG.pg} style={{ width: '7%', marginLeft: '71%' }} />
+        </ParallaxLayer>
+        <ParallaxLayer
+          offset={1.7}
+          speed={0.7}
+          style={{
+            pointerEvents: 'none',
+          }}
+        >
+          <img src={IMG.docker} style={{ width: '10%', marginLeft: '71%' }} />
+        </ParallaxLayer>
+        <ParallaxLayer
           onClick={() => parallax.current.scrollTo(2)}
+          offset={1}
+          speed={0.3}
           style={{
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
           }}
         >
-          <img src={url('bash')} style={{ width: '40%' }} />
+          <img src={IMG.nestJSLogo} style={{ width: '40%', marginRight: '20%' }} />
         </ParallaxLayer>
-
+        {/* 2 */}
         <ParallaxLayer
           offset={2}
-          speed={-0}
+          speed={1}
           style={{
             display: 'flex',
             alignItems: 'center',
@@ -115,8 +92,30 @@ function VerticalParallax(props: PageProps) {
           }}
           onClick={() => parallax.current.scrollTo(0)}
         >
-          <img src={url('clients-main')} style={{ width: '40%' }} />
+          {/* <img src={url('clients-main')} style={{ width: '40%' }} /> */}
         </ParallaxLayer>
+
+        {/* 0 */}
+        <ParallaxLayer
+          className="text-white"
+          offset={0}
+          speed={0.1}
+          onClick={() => parallax.current.scrollTo(1)}
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            flexDirection: 'column',
+          }}
+        >
+          <DevBluLottie w={300} h={300} />
+          <h1 className="mt-5">Hello Tools</h1>
+          <div className="mt-5">
+            <ChevWhiteeJsonLottie w={100} h={100} />
+          </div>
+        </ParallaxLayer>
+
+        {/*  */}
       </Parallax>
     </div>
   );

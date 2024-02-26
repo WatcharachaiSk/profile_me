@@ -13,6 +13,8 @@ import VerticalParallax from '../../components/react-spring/VerticalParallax';
 import SubProj from '../../components/text/SubProj';
 import ReactPlayer from 'react-player';
 import SubWork from '../../components/text/SubWork';
+import DevLottie from '../../components/react-lottie/DevLottie';
+import ChevLottie from '../../components/react-lottie/ChevLottie';
 
 // import React from "react";
 
@@ -38,6 +40,8 @@ function HomePage() {
       scrollProjRef.current.scrollIntoView({ behavior: 'smooth' });
     } else if (isScroll == 'work') {
       scrollWorkRef.current.scrollIntoView({ behavior: 'smooth' });
+    } else if (isScroll == 'tools') {
+      scrollParallaxRef.current.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
@@ -93,7 +97,7 @@ function HomePage() {
         </div>
 
         {/* */}
-        <div ref={scrollProjRef} className="felx h-screen w-full flex-wrap" style={{ overflow: 'auto' }}>
+        <div ref={scrollProjRef} className="felx h-screen w-full flex-wrap">
           <div className="flex flex-1 xl:flex-row md:flex-col flex-col  w-full h-full p-2">
             <div className="flex xl:basis-1/2 md:basis-2/2 sm:flex-1 flex-1 h-full w-full p-5 items-center justify-center">
               <SubProj setOpenModalPdfProj={setOpenModalPdfProjMa} />
@@ -108,21 +112,34 @@ function HomePage() {
         </div>
 
         {/* */}
-        <div ref={scrollWorkRef} className="felx h-screen w-full flex-wrap" style={{ overflow: 'auto' }}>
+        <div ref={scrollWorkRef} className="felx h-screen w-full flex-wrap">
           <div className="flex flex-1 xl:flex-row md:flex-col flex-col  w-full h-full p-2 ">
             <div className="flex xl:basis-1/2 md:basis-2/2 sm:flex-1 flex-1 h-full w-full p-5 items-center justify-center ">
               <SubWork />
             </div>
             <div className="flex xl:basis-1/2 md:basis-2/2 sm:flex-1 flex-1 h-full w-full items-center justify-center">
               <div className="flex flex-col items-center justify-center">
-                <h3>Dev</h3>
-                {/* <ReactPlayer controls={true} url="https://www.youtube.com/watch?v=cCGkwXezHSg" /> */}
+                {/* <h3>Dev</h3> */}
+                <DevLottie h={350} w={350} />
+                <button
+                  onClick={() => {
+                    handleButtonClick('tools');
+                  }}
+                  className="flex mt-2 h-10 w-52 justify-between items-center bg-transparent hover:bg-slate-500 text-slate-700 font-semibold hover:text-white border border-slate-500 hover:border-transparent rounded"
+                >
+                  <div className="flex basis-1/2 w-full justify-center">
+                    <h3>Tools</h3>
+                  </div>
+                  <div className="flex ">
+                    <ChevLottie w={50} h={30} />
+                  </div>
+                </button>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div ref={scrollParallaxRef} className="flex flex-1 w-full h-screen bg-slate-600 mx-1">
+      <div ref={scrollParallaxRef} className="flex flex-1 w-full h-screen mx-1 mt-40 xl:mt-5 md:mt-5">
         <VerticalParallax offset={0} />
       </div>
     </div>

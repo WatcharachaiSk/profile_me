@@ -26,10 +26,11 @@ const PdfViewer = (props: any) => {
 
   return (
     <Modal
-      size="7xl"
+      className="h-screen"
+      size="10xl"
       show={props.openModal}
       onClose={() => {
-        setPageNumber(1)
+        setPageNumber(1);
         props.setOpenModal(false);
       }}
     >
@@ -76,7 +77,7 @@ const PdfViewer = (props: any) => {
           </div>
           <div className="flex justify-center border border-slate-950">
             <Document file={props.pdfUrl} onLoadSuccess={onDocumentLoadSuccess}>
-              <Page  pageNumber={pageNumber} />
+              <Page pageNumber={pageNumber} />
             </Document>
           </div>
         </div>

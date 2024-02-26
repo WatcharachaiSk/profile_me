@@ -25,6 +25,7 @@ function HomePage() {
   const scrollCoopRef = useRef<any>(null);
   const scrollProjRef = useRef<any>(null);
   const scrollWorkRef = useRef<any>(null);
+  const scrollParallaxRef = useRef<any>(null);
 
   // ฟังก์ชันที่จะถูกเรียกเมื่อกดปุ่ม
   const handleButtonClick = (isScroll: string) => {
@@ -121,7 +122,9 @@ function HomePage() {
           </div>
         </div>
       </div>
-      {/* <VerticalParallax offset={0} /> */}
+      <div ref={scrollParallaxRef} className="flex flex-1 w-full h-screen bg-slate-600 mx-1">
+        <VerticalParallax offset={0} />
+      </div>
     </div>
   );
 }

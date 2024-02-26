@@ -11,7 +11,7 @@ const url = (name: string, wrap = false) =>
 function VerticalParallax(props: PageProps) {
   const parallax = useRef<IParallax>(null!);
   return (
-    <div style={{ width: '100%', height: '100%', background: '#253237' }}>
+    <div style={{ width: '100%', height: '100%', background: '#0c0b0b' }}>
       <Parallax ref={parallax} pages={3}>
         <ParallaxLayer offset={1} speed={1} style={{ backgroundColor: '#805E73' }} />
         <ParallaxLayer offset={2} speed={1} style={{ backgroundColor: '#87BCDE' }} />

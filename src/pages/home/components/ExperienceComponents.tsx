@@ -10,9 +10,9 @@ import Education from '../../../components/Education';
 function ExperienceComponents(props: any) {
   return (
     <div className="flex flex-1 flex-col bg-white w-full h-full">
-      <div className="flex w-full justify-center basis-0/12  text-3xl text-gray-600">
+      {/* <div className="flex w-full justify-center basis-0/12  text-4xl text-gray-600">
         <div>WATCHARACHAI SAMKHAN</div>
-      </div>
+      </div> */}
       {/* ติดต่อ */}
       <div className="flex basis-3/12  w-full">
         {/*  */}
@@ -28,39 +28,39 @@ function ExperienceComponents(props: any) {
                 </div>
               </div>
             </div>
-            <div className="flex basis-1/4 bg-white">
+            <div className="flex basis-1/4 bg-white" style={{ fontSize: 22 }}>
               <div className="flex items-center basis-1/2 bg-white">
                 <AiOutlineHome size={25} />
                 <div className="mx-2"> </div>
-                <div className="text-base">
+                <div className="">
                   <p> {IntoMe.add}</p>
                   <p> {IntoMe.addP}</p>
                 </div>
               </div>
             </div>
-            <div className="flex basis-1/4 bg-white">
+            <div className="flex basis-1/4 bg-white" style={{ fontSize: 22 }}>
               <div className="flex items-center basis-1/2 bg-white">
                 <AiOutlineMail size={25} />
                 <div className="mx-2"> </div>
-                <div className="text-base">
+                <div className="">
                   <p> {IntoMe.email}</p>
                 </div>
               </div>
             </div>
-            <div className="flex basis-1/4 bg-white">
+            <div className="flex basis-1/4 bg-white" style={{ fontSize: 22 }}>
               <div className="flex items-center basis-1/2 bg-white">
                 <FiPhone size={25} />
                 <div className="mx-2"> </div>
-                <div className="text-base">
+                <div className="">
                   <p> {IntoMe.tol}</p>
                 </div>
               </div>
             </div>
-            <div className="flex basis-1/4 bg-white">
+            <div className="flex basis-1/4 bg-white" style={{ fontSize: 22 }}>
               <div className="flex items-center basis-1/2 bg-white">
                 <FaGitAlt size={25} />
                 <div className="mx-2"> </div>
-                <div className="text-base">
+                <div className="">
                   <a href={IntoMe.git}> {IntoMe.git}</a>
                 </div>
               </div>
@@ -79,8 +79,8 @@ function ExperienceComponents(props: any) {
               </div>
             </div>
           </div>
-          <div className="text-lg pt-2">
-            <p>{IntoMe.interested}</p>
+          <div className="pt-2" style={{ fontSize: 28 }}>
+            <p className="indent-5">{IntoMe.interested}</p>
           </div>
         </div>
       </div>

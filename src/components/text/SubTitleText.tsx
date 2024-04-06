@@ -4,9 +4,9 @@ import { TitleTextProps } from '../../types/title-text-props';
 
 function SubTitleText(props: TitleTextProps) {
   return (
-    <div className="mt-1 flex justify-center text-base">
+    <div className="flex justify-start indent-5" style={{ fontFamily: 'THSarabunNew-Bold', fontSize: 25 }}>
       <div>
-        <p className="text-white">{props.title}</p>
+        <b className="text-white">{props.title}</b>
       </div>
     </div>
   );

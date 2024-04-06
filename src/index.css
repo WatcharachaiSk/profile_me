@@ -1,3 +1,29 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: "THSarabunNew";
+  src: local("THSarabunNew"), url("./assets/fonts/THSarabunNew/THSarabunNew.ttf") format("truetype");
+}
+@font-face {
+  font-family: "THSarabunNew-Bold";
+  src: local("THSarabunNew-Bold"), url("./assets/fonts/THSarabunNew/THSarabunNew-Bold.ttf") format("truetype");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "THSarabunNew-BoldItalic";
+  src: local("THSarabunNew-BoldItalic"), url("./assets/fonts/THSarabunNew/THSarabunNew-BoldItalic.ttf.ttf") format("truetype");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "THSarabunNew-Italic";
+  src: local("THSarabunNew-Italic"), url("./assets/fonts/THSarabunNew/THSarabunNew-Italic.ttf") format("truetype");
+  font-weight: bold;
+}
+
+
+
+

@@ -4,9 +4,9 @@ import { TitleTextProps } from '../../types/title-text-props';
 
 function TitleText(props: TitleTextProps) {
   return (
-    <div className="flex justify-center mt-2 text-lg">
+    <div className="flex justify-start mt-1 " style={{ fontFamily: 'THSarabunNew-Bold', fontSize: 30 }}>
       <div>
-        <p className="text-white">{props.title}</p>
+        <b className="text-white">{props.title}</b>
       </div>
     </div>
   );

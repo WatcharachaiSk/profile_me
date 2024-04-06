@@ -9,59 +9,60 @@ function SubProj(props: any) {
     props.setOpenModalPdfProj(true);
   };
   return (
-    <div>
+    <div className="text-slate-950">
       <h1>ปริญญานิพนธ์</h1>
-      <h3>หัวข้อ: {IntoMe.titleTimeTwoProj}</h3>
+      <p style={{ fontSize: 28 }}>หัวข้อ: {IntoMe.titleTimeTwoProj}</p>
       <div className="flex items-center">
         <div>
-          <p className="text-slate-950">
+          <p style={{ fontSize: 26 }}>
             ตำแหน่ง: <b> {IntoMe.titleTimeTwoRank}</b>
           </p>
         </div>
-        <div className="flex mx-5">
+        <div className="flex">
           <NodeLottie w={50} h={50} />
-          <div className="mx-3"></div>
           <ReactLottie w={40} h={40} />
         </div>
       </div>
-      <p className="">
-        เป็นระบบจัดการและติดตามสถานะครุภัณฑ์ ผ่านการ สแกนคิวอาร์โค้ดผ่านทางมือถือ
-        โดยสามารถออกคิวอาร์โค้ดได้ผ่านทางเว็บไซต์{' '}
-      </p>
-      <p className="indent-5">
-        - ออกแบบพัฒนา API และ Database, NodeJS(Express), MySQL [
-        <span
-          onClick={() => {
-            window.open('https://github.com/WatcharachaiSk/BE_Qr');
-          }}
-        >
-          <BsFolderSymlink color={'#bf0705'} size={20} />
-        </span>
-        ]
-      </p>
-      <p className="indent-10">- Deploy on Ubuntu20.04, Nginx, PM2</p>
-      <p className="indent-5">
-        - Front End (Web) ระบบจัดการข้อมูลพื้นฐาน คิวอาร์โค้ดครุภัณฑ์ และ ข้อมูลผู้ใช้งาน [
-        <span
-          onClick={() => {
-            window.open('https://github.com/WatcharachaiSk/AssetsKKCWeb');
-          }}
-        >
-          <BsFolderSymlink color={'#7eccec'} size={20} />
-        </span>
-        ]
-      </p>
-      <p className="indent-5">
-        - Front End (Mobile Application) ระบบสแกนคิวอาร์โค้ดครุภัณฑ์เพื่อตรวจสอบสถานะ [{' '}
-        <span
-          onClick={() => {
-            window.open('https://github.com/WatcharachaiSk/AssetsKKC');
-          }}
-        >
-          <BsFolderSymlink color={'#244388'} size={20} />
-        </span>
-        ]
-      </p>
+      <div style={{ fontSize: 22 }}>
+        <p>
+          เป็นระบบจัดการและติดตามสถานะครุภัณฑ์ ผ่านการ สแกนคิวอาร์โค้ดผ่านทางมือถือ
+          โดยสามารถออกคิวอาร์โค้ดได้ผ่านทางเว็บไซต์{' '}
+        </p>
+        <p className="indent-5">
+          - ออกแบบพัฒนา API และ Database, NodeJS(Express), MySQL [
+          <span
+            onClick={() => {
+              window.open('https://github.com/WatcharachaiSk/BE_Qr');
+            }}
+          >
+            <BsFolderSymlink color={'#bf0705'} size={20} />
+          </span>
+          ]
+        </p>
+        <p className="indent-10">- Deploy on Ubuntu20.04, Nginx, PM2</p>
+        <p className="indent-5">
+          - Front End (Web) ระบบจัดการข้อมูลพื้นฐาน คิวอาร์โค้ดครุภัณฑ์ และ ข้อมูลผู้ใช้งาน [
+          <span
+            onClick={() => {
+              window.open('https://github.com/WatcharachaiSk/AssetsKKCWeb');
+            }}
+          >
+            <BsFolderSymlink color={'#7eccec'} size={20} />
+          </span>
+          ]
+        </p>
+        <p className="indent-5">
+          - Front End (Mobile Application) ระบบสแกนคิวอาร์โค้ดครุภัณฑ์เพื่อตรวจสอบสถานะ [{' '}
+          <span
+            onClick={() => {
+              window.open('https://github.com/WatcharachaiSk/AssetsKKC');
+            }}
+          >
+            <BsFolderSymlink color={'#244388'} size={20} />
+          </span>
+          ]
+        </p>
+
 
       <button
         onClick={() => {
@@ -79,6 +80,8 @@ function SubProj(props: any) {
       >
         ดูผลงานเล่ม Manual PDF <HiArrowNarrowRight className="ml-2 h-3 w-3" />
       </button>
+      </div>
+
     </div>
   );
 }

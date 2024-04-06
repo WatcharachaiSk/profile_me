@@ -75,7 +75,7 @@ function HomePage() {
       <PdfViewer pdfUrl={PDF.pdfPrMa} openModal={openModalPdfProjMa} setOpenModal={setOpenModalPdfProjMa} />
 
       <div className="flex xl:basis-1/4 md:basis-2/4 sm-flex-1 w-full h-full overscroll-contain">
-        <SkillComponents />
+        <SkillComponents handleButtonClick={handleButtonClick} />
       </div>
       <div className="flex xl:basis-3/4 md:basis-2/4 sm-flex-1  w-full h-fit">
         <ExperienceComponents handleButtonClick={handleButtonClick} />
@@ -104,7 +104,7 @@ function HomePage() {
             </div>
             <div className="flex xl:basis-1/2 md:basis-2/2 sm:flex-1 flex-1 h-full w-full items-center justify-center">
               <div className="flex flex-col items-center justify-center">
-                <h3>สาธิตการใช้งาน</h3>
+                <h1>สาธิตการใช้งาน</h1>
                 <ReactPlayer controls={true} url="https://www.youtube.com/watch?v=cCGkwXezHSg" />
               </div>
             </div>

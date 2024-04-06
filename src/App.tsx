@@ -8,7 +8,7 @@ function App() {
 
   return (
     <div className="h-screen w-screen">
-      <div className="flex ">
+      <div className="flex" style={{ fontFamily: 'THSarabunNew', fontSize: 18 }}>
         <HomePage />
       </div>
     </div>
